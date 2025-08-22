@@ -17,16 +17,15 @@
     &lt;/body&gt;
     &lt;/html&gt;
     </pre>
-Next add script tags to the head, flop.js and your js file.
+Next add a script tag to the head of your js code.
 <pre>
-    &lt;script src=&quot;flop-vm/sprite.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;flop-vm/global.js&quot;&gt;&lt;/script&gt;
     &lt;script src=&quot;index.js&quot; type=&quot;module&quot;&gt;&lt;/script&gt;
     </pre>
-Next make a new js file under <code>index.js</code>:
+Next make a new js file named <code>index.js</code>:
 <pre>
-// import the RenderLoop system from node_modules
+// import flop.js
 import { RenderLoop } from "./flop-render/index.js";
+import { Sprite, Flop } from "./flop-vm/index.js"
 
 // get the canvas element
 const canvas = document.getElementById('stage');
@@ -69,6 +68,7 @@ sprite!<br>
 Create a new async function <code>run</code> or any other name you find suitable, and link it to the start button.
 
 <pre>
+// required, as some browsers do not allow sound to play automatically!
 document.getElementById("start").addEventListener("click", async () => {
     await run();
 });
@@ -80,7 +80,7 @@ async function run() {
     document.getElementById("start").remove();
 
     sprite1.motion.moveSteps(10);
-    aleat("yay!");
+    aleart("yay!");
 }
     </pre>
 
