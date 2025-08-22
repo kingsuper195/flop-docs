@@ -1,49 +1,6 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Flop Docs</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="index.css" />
-</head>
-
-<body>
-    <h1>Flop Docuementation</h1>
-    <h2>Table of Contents</h2>
-    <ol>
-        <li>
-            <a href="#whatisflop">What is Flop?</a>
-        </li>
-        <li>
-            <a href="#getstarted">Get Started</a>
-        </li>
-    </ol>
-    <h2 id="whatisflop">What is Flop?</h2>
-    <p>
-        Flop.js is a scratch-style rendering library. It is made to create a link between scratch and js. It uses html
-        canvas elements to implement projects. There are two main libraries in flop:
-        <code>flop-vm</code> and
-        <code>flop-render</code>.<br>
-        <code>flop-vm</code> processes all the data, positions and provides user functions such as
-        <code>moveSteps(10);</code> and
-        <code>setCostume()</code>.<br>
-        <code>flop-render</code> takes the data from
-        <code>flop-vm</code>, and fittingly, renders it. It uses
-        <code>scratch-render</code> as a dependecy, and passes the values from
-        <code>flop-vm</code> into it. It also handles the
-        <code>renderLoop</code> which is system which sets up a re-render every frame.<br>
-    </p>
-    <p>
-        Flop.js is an asynchronous library, which means, you have to use&nbsp
-        <code>await</code> and
-        <code>async</code>
-        with your code.
-    </p>
-
-    <h2 id="getstarted">Get Started</h2>
-    <p>
-        First, create a new HTML file with a canvas element, and a button.
-    <pre>
+<p>
+    First, create a new HTML file with a canvas element, and a button.
+<pre>
     &lt;!DOCTYPE html&gt;
     &lt;html lang=&quot;en&quot;&gt;
     
@@ -60,14 +17,14 @@
     &lt;/body&gt;
     &lt;/html&gt;
     </pre>
-    Next add script tags to the head, flop.js and your js file.
-    <pre>
+Next add script tags to the head, flop.js and your js file.
+<pre>
     &lt;script src=&quot;flop-vm/sprite.js&quot;&gt;&lt;/script&gt;
     &lt;script src=&quot;flop-vm/global.js&quot;&gt;&lt;/script&gt;
     &lt;script src=&quot;index.js&quot; type=&quot;module&quot;&gt;&lt;/script&gt;
     </pre>
-    Next make a new js file under <code>index.js</code>:
-    <pre>
+Next make a new js file under <code>index.js</code>:
+<pre>
 // import the RenderLoop system from node_modules
 import { RenderLoop } from "./flop-render/index.js";
 
@@ -82,9 +39,6 @@ const renderLoop = new RenderLoop(canvas);
 
 // get the scratch renderer
 const renderer = renderLoop.renderer;
-
-// set layering type
-renderer.setLayerGroupOrdering(['group']);
     
 // give flop-vm access to the renderLoop
 flop.setRenderLoop(renderLoop);
@@ -109,18 +63,18 @@ sprite1.costumes[0] = {
 };
     </pre>
 
-    Congradulations! You have created a sprite, and linked it to the renderLoop! You can now run code on this
-    sprite!<br>
+Congradulations! You have created a sprite, and linked it to the renderLoop! You can now run code on this
+sprite!<br>
 
-    Create a new async function <code>run</code> or any other name you find suitable, and link it to the start button.
+Create a new async function <code>run</code> or any other name you find suitable, and link it to the start button.
 
-    <pre>
+<pre>
 document.getElementById("start").addEventListener("click", async () => {
     await run();
 });
 </pre>
-    Then, in the <code>run</code> function, add function to your code!
-    <pre>
+Then, in the <code>run</code> function, add function to your code!
+<pre>
 async function run() {
     // You are recomended to remove the start button, in case the user clicks it multiple times, as this can cause your code to act in unexpected ways.
     document.getElementById("start").remove();
@@ -130,7 +84,4 @@ async function run() {
 }
     </pre>
 
-    </p>
-</body>
-
-</html>
+</p>

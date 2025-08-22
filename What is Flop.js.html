@@ -1,0 +1,20 @@
+<p>
+        Flop.js is a scratch-style rendering library. It is made to create a link between scratch and js. It uses html
+        canvas elements to implement projects. There are two main libraries in flop:
+        <code>flop-vm</code> and
+        <code>flop-render</code>.<br>
+        <code>flop-vm</code> processes all the data, positions and provides user functions such as
+        <code>moveSteps(10);</code> and
+        <code>setCostume()</code>.<br>
+        <code>flop-render</code> takes the data from
+        <code>flop-vm</code>, and fittingly, renders it. It uses
+        <code>scratch-render</code> as a dependecy, and passes the values from
+        <code>flop-vm</code> into it. It also handles the
+        <code>renderLoop</code> which is system which sets up a re-render every frame.<br>
+    </p>
+    <p>
+        Flop.js is an asynchronous library, which means, you have to use&nbsp
+        <code>await</code> and
+        <code>async</code>
+        with your code.
+    </p>
