@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Getting Started</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                <div class="dropdown is-hoverable is-right">
+                    <a class="dropdown-trigger link">
+                        Tutorials
+                        <i class="fas fa-chevron-down fa-xs"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                        
+                            <a class="dropdown-item" href="tutorial-Getting Started.html">
+                                Getting Started
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-Scratch to Flop.html">
+                                Scratch to Flop
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-What is Flop.js.html">
+                                What is Flop.js
+                            </a>
+                        
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar tutorials"
+            id="sidebarNav"
+        >
+            
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
+            <nav>
+                
+                    <div class="category"><h3>Tutorials</h3><ul><li><a href="tutorial-Getting Started.html">Getting Started</a></li><li><a href="tutorial-Scratch to Flop.html">Scratch to Flop</a></li><li><a href="tutorial-What is Flop.js.html">What is Flop.js</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Tutorial</p>
+                    <h1>Getting Started</h1>
+                </header>
+                <section>
+
+<article>
+    <p>
+    First, create a new HTML file with a canvas element, and a button.
+<pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+    
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;title&gt;My First Flop.js Project&lt;/title&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id=&quot;stage-container&quot;&gt;
+        &lt;button id=&quot;start&quot;&gt;Begin&lt;/button&gt;
+        &lt;canvas id=&quot;stage&quot;&gt;&lt;/canvas&gt;
+    &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </pre>
+Next add a script tag to the head of your js code.
+<pre>
+    &lt;script src=&quot;index.js&quot; type=&quot;module&quot;&gt;&lt;/script&gt;
+    </pre>
+Next make a new js file named <code>index.js</code>:
+<pre>
+// import flop.js
+import { RenderLoop } from "./flop-render/index.js";
+import { Sprite, Flop } from "./flop-vm/index.js"
+
+// get the canvas element
+const canvas = document.getElementById('stage');
+
+// create a global function (equivalent to the scratch stage)
+let flop = new Flop();
+
+// make new renderLoop
+const renderLoop = new RenderLoop(canvas);
+
+// get the scratch renderer
+const renderer = renderLoop.renderer;
+    
+// give flop-vm access to the renderLoop
+flop.setRenderLoop(renderLoop);
+
+// Add backdrop
+flop.looks.setBackdrop("./backdrop1.png", "bitmap");
+
+// Create sprite1
+let sprite1 = new Sprite();
+
+// create scratch-render drawable linked to the render variable. Used internally, there will be a function for this in the future.
+sprite1.render = renderer.createDrawable('group');
+
+// Add the sprite to the renderLoop
+renderLoop.addSprite(sprite1, "Kitty");
+
+// Create a costume!
+sprite1.costumes[0] = {
+    "data": "./costume1.svg",
+    "type": "vector",
+    "name": "Cat"
+};
+    </pre>
+
+Congradulations! You have created a sprite, and linked it to the renderLoop! You can now run code on this
+sprite!<br>
+
+Create a new async function <code>run</code> or any other name you find suitable, and link it to the start button.
+
+<pre>
+// required, as some browsers do not allow sound to play automatically!
+document.getElementById("start").addEventListener("click", async () => {
+    await run();
+});
+</pre>
+Then, in the <code>run</code> function, add function to your code!
+<pre>
+async function run() {
+    // You are recomended to remove the start button, in case the user clicks it multiple times, as this can cause your code to act in unexpected ways.
+    document.getElementById("start").remove();
+
+    sprite1.motion.moveSteps(10);
+    aleart("yay!");
+}
+    </pre>
+
+</p>
+</article>
+
+</section>
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+    "sourceType": "module",
+    "source": {
+        "include": [
+            "../../flop-vm/sprite.js",
+            "../../flop-vm/global.js"
+        ]
+    },
+    "opts": {
+        "template": "node_modules/better-docs",
+        "tutorials": "../tutorials",
+        "destination": "../docs"
+    },
+    "templates": {
+        "search": true,
+        "default": {
+            "outputSourceFiles": false
+        }
+    },
+    "tags": {
+        "allowUnknownTags": [
+            "category"
+        ]
+    },
+    "plugins": [
+        "node_modules/better-docs/category"
+    ]
+}

@@ -1,0 +1,303 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> global.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                <div class="dropdown is-hoverable is-right">
+                    <a class="dropdown-trigger link">
+                        Tutorials
+                        <i class="fas fa-chevron-down fa-xs"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                        
+                            <a class="dropdown-item" href="tutorial-Getting Started.html">
+                                Getting Started
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-Scratch to Flop.html">
+                                Scratch to Flop
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-What is Flop.js.html">
+                                What is Flop.js
+                            </a>
+                        
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"></div><div class="category"><h2>control</h2><h3>Global</h3><ul><li><a href="global.html#waitSeconds">waitSeconds</a></li></ul></div><div class="category"><h2>looks</h2><h3>Global</h3><ul><li><a href="global.html#changeEffect">changeEffect</a></li><li><a href="global.html#changeSize">changeSize</a></li><li><a href="global.html#clearEffects">clearEffects</a></li><li><a href="global.html#costumeNumber">costumeNumber</a></li><li><a href="global.html#hide">hide</a></li><li><a href="global.html#nextCostume">nextCostume</a></li><li><a href="global.html#setBackdrop">setBackdrop</a></li><li><a href="global.html#setCostume">setCostume</a></li><li><a href="global.html#setEffect">setEffect</a></li><li><a href="global.html#setSize">setSize</a></li><li><a href="global.html#show">show</a></li><li><a href="global.html#size">size</a></li></ul></div><div class="category"><h2>motion</h2><h3>Global</h3><ul><li><a href="global.html#changeX">changeX</a></li><li><a href="global.html#changeY">changeY</a></li><li><a href="global.html#getDir">getDir</a></li><li><a href="global.html#getX">getX</a></li><li><a href="global.html#getY">getY</a></li><li><a href="global.html#glide">glide</a></li><li><a href="global.html#glideTo">glideTo</a></li><li><a href="global.html#goTo">goTo</a></li><li><a href="global.html#gotoXY">gotoXY</a></li><li><a href="global.html#moveSteps">moveSteps</a></li><li><a href="global.html#pointInDirection">pointInDirection</a></li><li><a href="global.html#pointTowards">pointTowards</a></li><li><a href="global.html#setRotationStyle">setRotationStyle</a></li><li><a href="global.html#setX">setX</a></li><li><a href="global.html#setY">setY</a></li><li><a href="global.html#turnLeft">turnLeft</a></li><li><a href="global.html#turnRight">turnRight</a></li></ul></div><div class="category"><h2>operaters</h2><h3>Global</h3><ul><li><a href="global.html#pickRandom">pickRandom</a></li></ul></div><div class="category"><h2>sensing</h2><h3>Global</h3><ul><li><a href="global.html#colourTouchingColour">colourTouchingColour</a></li><li><a href="global.html#distanceTo">distanceTo</a></li><li><a href="global.html#keyPressed">keyPressed</a></li><li><a href="global.html#mouseDown">mouseDown</a></li><li><a href="global.html#mouseX">mouseX</a></li><li><a href="global.html#mouseY">mouseY</a></li><li><a href="global.html#touching">touching</a></li><li><a href="global.html#touchingColour">touchingColour</a></li></ul></div><div class="category"><h2>sound</h2><h3>Global</h3><ul><li><a href="global.html#playSound">playSound</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>global.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>
+export class Flop {
+  renderLoop = null;
+  looks = {};
+  sound = {};
+  control = {};
+  sensing = {};
+  operaters = {};
+  resolvers = [];
+
+  constructor() {
+    this.looks.setBackdrop = setBackdrop.bind(this);
+    this.sound.playSound = playSound.bind(this);
+    this.control.waitSeconds = waitSeconds.bind(this);
+    this.sensing.keyPressed = keyPressed.bind(this);
+    this.sensing.mouseDown = mouseDown.bind(this);
+    this.sensing.mouseX = mouseX.bind(this);
+    this.sensing.mouseY = mouseY.bind(this);
+    this.operaters.pickRandom = pickRandom.bind(this);
+  }
+
+  destructor() {
+    if (this.renderLoop) {
+      this.renderLoop.removeCallback(this.renderStep.bind(this));
+    }
+  }
+
+
+
+  setRenderLoop(renderLoop) {
+    if (this.renderLoop) {
+      // this.renderLoop.removeCallback(this.glideStep.bind(this));
+    }
+    this.renderLoop = renderLoop;
+    if (this.renderLoop) {
+      this.renderLoop.addCallback(this.renderStep.bind(this));
+    }
+  }
+
+  renderStep() {
+    const resolvers = [...this.resolvers];
+    this.resolvers = [];
+    resolvers.forEach(resolve => resolve());
+
+    if (this.glideProps) {
+      if (this.glideProps.i >= this.glideProps.max) {
+        this.glideProps.resolve();
+        this.glideProps = null;
+        return;
+      }
+      this.glideProps.i++;
+      this.x += this.glideProps.speedx;
+      this.y += this.glideProps.speedy;
+    }
+  }
+
+  async waitForRenderLoop() {
+    return new Promise(resolve => {
+      this.resolvers.push(resolve);
+    });
+  }
+}
+/**
+ * @description Sets the background of the stage,
+ * @param {string} img url/filepath to backdrop image
+ * @param {string} type "vector" or "bitmap"
+ * @example
+ * await flop.looks.setBackdrop("him.png",bimap);
+ * @returns Promise. Await function to wait for the RenderLoop.
+ * @category looks
+ */
+async function setBackdrop(img, type) {
+  await this.renderLoop.setStage(img, type);
+  return this.waitForRenderLoop();
+}
+/**
+ * @description Play sound.
+ * @param {number} pan Pan (left/right) of sound file -100 - 100
+ * @param {number} pitch Pitch of sound file 0 - 100
+ * @param {number} volume Volume of sound file 0 - 100
+ * @param {string} soundFile url/filepath to sound file.
+ * @example 
+ * await flop.sound.playSound(0, 100,100,sound.mp3)
+ * @category sound
+ */
+async function playSound(pan, pitch, volume, soundFile) {
+  await this.renderLoop.playSound(pan, pitch, volume, soundFile);
+}
+/**
+ * @description Sleep the code for s seconds.
+ * @param {number} s seconds to wait.
+ * @example
+ * sprite.motion.moveSteps(10);
+ * flop.control.waitSeconds(0.1);
+ * sprite.motion.moveSteps(10);
+ * @returns Promise. Await to wait for s seconds
+ * @category control
+ */
+function waitSeconds(s) {
+  return new Promise(resolve => setTimeout(resolve, s * 1000));
+}
+/**
+ * @description is this key pressed
+ * @param {string} key https://developer.mozilla.org/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values + a-z
+ * @example
+ * if(await flop.sensing.keyPressed("B")) 
+ * @returns boolean
+ * @category sensing
+ */
+async function keyPressed(key) {
+  return (renderLoop.key == key);
+}
+
+/**
+ * @description is the mouse being clicked or not.
+ * @example
+ * if(await flop.sensing.mouseDown()){
+ *  console.log("yay!");
+ * }
+ * @returns boolean
+ * @category sensing
+ */
+async function mouseDown() {
+  return this.renderLoop.mouse.click;
+}
+/**
+ * @description Get the mouse x position.
+ * @example
+ * console.log(await flop.sensing.mouseX());
+ * @returns number, x postition of mouse pointer
+ * @category sensing
+ */
+async function mouseX() {
+  return this.renderLoop.mouse.x;
+}
+/**
+ * @description Get the mouse y position.
+ * @example
+ * console.log(await flop.sensing.mouseY());
+ * @returns number, y postition of mouse pointer
+ * @category sensing
+ */
+async function mouseY() {
+  return this.renderLoop.mouse.y;
+}
+/**
+ * @description Get a random number from min to max.
+ * @example
+ * console.log(await flop.operaters.pickRandom(3,10)); 
+ * @param {number} min 
+ * @param {number} max 
+ * @returns number
+ * @category operaters
+ */
+async function pickRandom(min, max) {
+  return Math.floor(Math.random() * max - min) + min + 1;
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
+
+
+</body>
+</html>
