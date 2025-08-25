@@ -166,6 +166,151 @@
         <td><code>sprite.looks.size();</code></td>
     </tr>
 </table>
+<h2>Sound</h2>
+Sound blocks are implemented using a different meathod, with one <code>
+    flop.looks.playSound(pan,pitch,volume,"/path/to/sound/file");
+</code> 
+command. <code>pan</code> is a range from -100 (left) to 100 (right). Both pitch and volume are a range from 0 to 100.
+<h2>Control</h2>
+Many contol blocks are acctually built into Javascript
+<table>
+    <tr>
+        <th>Scratch</th>
+        <th>Flop</th>
+    </tr>
+    <tr>
+        <td><code class="sb">wait(1)seconds</code></td>
+        <td><code>await flop.control.waitSeconds(1);</code></td>
+    </tr>
+    <tr>
+        <td><code class="sb">repeat(10)
+            ...
+        </code></td>
+        <td>See Javascript <code>for</code> loops</td>
+    </tr>
+    <tr>
+        <td><code class="sb">forever
+            ...
+        </code></td>
+        <td>See Javascript <code>while(true)</code> loops</td>
+    </tr>
+    <tr>
+        <td><code class="sb">if <> then
+        end
+        
+        if<>then 
+        else</code></td>
+        <td>See Javascript <code>if</code> conditions</td>
+    </tr>
+    <tr>
+        <td><code class="sb">wait until <></code></td>
+        <td>Coming soon!</td>
+    </tr>
+    <tr>
+        <td><code class="sb">repeat until <></code></td>
+        <td>See Javascript <code>while(!)</code> loops</td>
+    </tr>
+    <tr>
+        <td><code class="sb">stop [all v]</code></td>
+        <td>See javascript <code>return</code> statements</td>
+    </tr>
+    <tr>
+        <td><code class="sb">when i start as a clone</code></td>
+        <td>Coming soon!</td>
+    </tr>
+    <tr>
+        <td><code class="sb">create clone of (myself v)</code></td>
+        <td>Coming soon!</td>
+    </tr>
+    <tr>
+        <td><code class="sb">delete this clone</code></td>
+        <td>Coming soon!</td>
+    </tr> 
+</table>
+
+<h2>Sensing</h2>
+<table>
+    <tr>
+        <th>Scratch</th>
+        <th>Flop</th>
+    </tr>
+    <tr>
+        <td><code class="sb">&lt;touching (mouse-pointer v)?&gt;</code></td>
+        <td><code>await sprite.sensing.touching("mouse")</code></td>
+    </tr>
+    <tr>
+        <td><code class="sb">&lt;touching color[#0000ff]?&gt;</code></td>
+        <td><code>sprite.sensing.touchingColour([0,0,255]);</code></td>
+    </tr>
+    <tr>
+        <td><code class="sb">&lt;color [#0000ff] is touching [#0000ff]?&gt;</code></td>
+        <td><code>sprite.sensing.colourTouchingColour([0,0,225],[0,0,225]);</code></td>
+    </tr>
+    <tr>
+        <td><code class="sb">(distance to (mouse-pointer v))</code></td>
+        <td><code>sprite.sensing.distanceTo("mouse");</code></td>
+    </tr>
+    <tr>
+        <td><code class="sb">ask [What's your name?] and wait</code></td>
+        <td>See Javascript <code>prompt</code> function</td>
+    </tr>
+    <tr>
+        <td><code class="sb">(answer)</code></td>
+        <td>See Javascript <code>prompt</code> function</td>
+    </tr>
+    <tr>
+        <td><code class="sb">&lt;key(space v)pressed?&gt;</code></td>
+        <td><code>flop.sensing.keyPressed(" ");</code></td>
+    </tr>
+    <tr>
+        <td><code class="sb">&lt;mouse down?&gt;</code></td>
+        <td><code>flop.sensing.mouseDown();</code></td>
+    </tr>
+    <tr>
+        <td><code class="sb">(mouse x)</code></td>
+        <td><code>sprite.sensing.mouseX();</code></td>
+    </tr>
+    <tr>
+        <td><code class="sb">(mouse y)</code></td>
+        <td><code>sprite.sensing.mouseY();</code></td>
+    </tr>
+
+    <tr>
+        <td><code class="sb">set drag mode [draggable v]</code></td>
+        <td>Not implemented</td>
+    </tr>
+    <tr>
+        <td><code class="sb">(loudness)</code></td>
+        <td>Not implemented</td>
+    </tr>
+    <tr>
+        <td><code class="sb">(timer)</code></td>
+        <td>Not implemented</td>
+    </tr>
+    <tr>
+        <td><code class="sb">reset timer</code></td>
+        <td>Not implemented</td>
+    </tr>
+    <tr>
+        <td><code class=sb>[ v] of ( v)</code></td>
+        <td>You can use <code>sprite2.motion.getX()</code>within sprite1 code!</td>
+    </tr>
+    <tr>
+        <td><code class=sb>current [year v]</code></td>
+        <td>Coming soon!</td>
+    </tr>
+    <tr>
+        <td><code class=sb>(days since 2000)</code></td>
+        <td>Coming soon!</td>
+    </tr>
+    <tr>
+        <td><code class="sb">(username)</code></td>
+        <td>Not implemented</td>
+    </tr>
+</table>
+
+<h2>Operaters, Variables, and My Blocks</h2>
+All of the scratch blocks in these categories are built into Javascript, execpt one: <code class="sb">(pick random (1) to (10))</code> Which is implemented with <code>flop.operaters.pickRandom(1,10)</code>
 
 
 <script>
