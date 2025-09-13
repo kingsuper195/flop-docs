@@ -9,7 +9,8 @@
     "opts": {
         "template": "node_modules/better-docs",
         "tutorials": "../tutorials",
-        "destination": "../docs"
+        "destination": "../docs",
+        "readme":"../README.md"
     },
     "templates": {
         "search": true,
